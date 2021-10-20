@@ -41,10 +41,13 @@ const Navbar = () => {
           <Link to="/ourdoctor">
           <li><a href="#" class="nav-link px-2 text-dark">Our Doctors</a></li>
           </Link>
-          
-          <Link to="/contact">
+
+
+          <Link to="/semi">
           <li><a href="#" class="nav-link px-2 text-dark">Contact Us</a></li>
           </Link>
+          
+
           
          
 
@@ -52,7 +55,8 @@ const Navbar = () => {
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
           {user?.email&&
-          <button className="btn btn-primary">{user.displayName}</button>
+         
+          <li><span style={{color:"#1f487e"}} class="navbar-text text-dark"> {user.displayName} </span></li>
           }
          
         </form>

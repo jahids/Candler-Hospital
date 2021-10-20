@@ -15,7 +15,7 @@ import Detiles from './pages/Detiles';
 import Authprovider from './Context/Authprovider';
 import Privateroute from './privateroute/Privateroute';
 import Notfound from './pages/Notfound/Notfound';
-import Tcontact from './pages/Tcontact';
+import Semicontact from './pages/contact/Semicontact';
 
 function App() {
   return (
@@ -50,14 +50,20 @@ function App() {
               <Login></Login>
            </Route>
 
+
+         {/* <Route path="contactus">
+             <Contactus></Contactus>
+           </Route> */}
+           
+         <Route path="/semi">
+             <Semicontact></Semicontact>
+           </Route>
            
            <Privateroute path="/detiles/:id">
               <Detiles></Detiles>
            </Privateroute>
 
-           <Route path="contact">
-             <Tcontact></Tcontact>
-           </Route>
+           
 
            
            <Route path="/signup">

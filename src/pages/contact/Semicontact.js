@@ -1,25 +1,11 @@
 import React from 'react';
 
-
-
-
-
-const Tcontact = () => {
+const Semicontact = () => {
     return (
         <div>
-            
-            {/* <Navbar/>
-            <div classNameName="container p-4 text-center">
-                
-                <input type="text" placeholder="Username..." /><br /><br />
-                <input type="email" placeholder="Email..." /><br /><br />
-                <textarea placeholder="Message..." /><br /><br />
-                <button classNameName="btn btn-outline-danger btn-lg">Send</button>
-            </div>
-            */}
-    <h1 classNameName="my-4">Contact Us</h1>
+    <h1 className="my-4 mt-4">Contact Us</h1>
 
-  <section id="contact" className="py-5">
+  <section id="contact" className="py-5 rounded-3">
     <div className="container">
       <div className="row pt-5">
         <div className="col-md-8">
@@ -53,7 +39,7 @@ const Tcontact = () => {
                   </div>
                 </div>
                 <div className="col-md-12">
-                  <input type="submit" className="btn  btn-block btn-dark mt-2" value="Send"/>
+                  <input type="submit" className="btn  card-button btn-dark mt-2" value="Send"/>
                 </div>
               </div>
             </div>
@@ -83,4 +69,4 @@ const Tcontact = () => {
     );
 };
 
-export default Tcontact;
+export default Semicontact;

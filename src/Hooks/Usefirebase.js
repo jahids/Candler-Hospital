@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword,getAuth, updateProfile, signInWithPopup,sign
 import inisialaization from '../firebase/firebase.init';
 
 inisialaization();
+
 const Usefirebase = () => {
    
       
@@ -60,8 +61,8 @@ const Usefirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
           .then((result) => {
             const user = result.user;
-            setuser(name);
             setuser(user);
+            setUserName(name);
             seteror('');
             console.log(user)
           })
@@ -78,6 +79,7 @@ const Usefirebase = () => {
       }
 
       const newUserLogin = (email, password) => {
+        console.log('this is form newUserLogin');
         signInWithEmailAndPassword(auth, email, password)
         .then(result => {
             const user = result.user;
@@ -99,10 +101,9 @@ const Usefirebase = () => {
         signinusingGoogle,
         logout,
         isloading,
-        setloading
-        
-         
-
+        setloading,
+        newAccount,
+        newUserLogin
     }
 
 

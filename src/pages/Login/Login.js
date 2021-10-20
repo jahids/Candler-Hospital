@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link,useHistory,useLocation } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-import Usefirebase from '../../Hooks/Usefirebase';
 import "./Login.css";
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-    const {signinusingGoogle,isloading, setloading} = useAuth();
+    const {signinusingGoogle, isloading, setloading, newUserLogin} = useAuth();
     const history = useHistory();
     const location = useLocation();
     const Redirect_ui = location.state?.from || "/home";
@@ -20,13 +19,15 @@ const Login = () => {
           })
           
           .finally(() => setloading(false));
-
-
-
     }
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+
+    const onSubmit = data => {
+        const {email, password} = data;
+        console.log(email, password)
+        newUserLogin(email, password)
+    };
 
     return (
         <div>
