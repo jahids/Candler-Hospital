@@ -20,7 +20,9 @@ const Signup = () => {
 
       if(password.length >= 6){
         newAccount(email, password, name);
+        alert("your Account Create");
         console.log('hello')
+      
       }else{
         alert('password must be at last 6 cahracter')
       }
